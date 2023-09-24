@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List Manager</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <div id="toast-container" class="toast-container"></div>
+
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="input-container">
+        <input type="text" id="taskName" placeholder="Task name" />
+        <input
+          type="text"
+          id="taskDescription"
+          placeholder="Task description"
+        />
+        <input type="date" id="dueDate" placeholder="Due Date" />
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+      <div class="filter-container">
+        <label>Show: </label>
+        <select id="taskFilter">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+        </select>
+        <div id="hello"></div>
+      </div>
+      <hr class="tobecss" />
+      <div id="taskList">
+        <!-- Tasks will be displayed here -->
+      </div>
+      <div class="controls">
+        <button id="undoBtn">&#8630; Undo</button>
+        <button id="redoBtn">Redo &#x21B7;</button>
+      </div>
+      <div id="taskDetailsModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Task Details</h2>
+          <div id="taskDetails"></div>
+        </div>
+      </div>
+    </div>
+    <script src="fun.js"></script>
+  </body>
+</html>
